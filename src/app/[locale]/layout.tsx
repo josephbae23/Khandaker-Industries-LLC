@@ -11,9 +11,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const isAr = params.locale === "ar";
+  const { locale: paramLocale } = await params;
+  const isAr = paramLocale === "ar";
   return {
     title: isAr
       ? "خنداكر إندستريز ش.م.م | توريد العمالة والتأشيرات والسفر"
@@ -29,9 +30,10 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale as Locale;
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   if (!locales.includes(locale)) notFound();
 
   const dir = getDir(locale);

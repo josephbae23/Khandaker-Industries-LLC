@@ -17,9 +17,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
-  experimental: {
-    serverComponentsExternalPackages: [],
-  },
+  serverExternalPackages: [],
 }
 
 module.exports = nextConfig
