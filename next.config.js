@@ -7,11 +7,14 @@ const isUserOrOrgPages = repositoryName.endsWith(".github.io");
 const basePath = isGithubActions && !isUserOrOrgPages ? `/${repositoryName}` : "";
 
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  // Only use static export for GitHub Pages, not for Vercel
+  ...(isGithubActions && {
+    output: "export",
+    trailingSlash: true,
+    images: {
+      unoptimized: true,
+    },
+  }),
   basePath,
   assetPrefix: basePath || undefined,
   env: {
