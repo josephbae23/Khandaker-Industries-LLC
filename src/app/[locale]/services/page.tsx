@@ -9,8 +9,9 @@ const SERVICE_IMAGES = [
   "/services/corporate-hr-consulting.jpg",
 ];
 
-export default async function ServicesPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale as Locale;
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   const t = await getTranslations(locale);
   const s = t.services_page;
   const isRtl = locale === "ar";

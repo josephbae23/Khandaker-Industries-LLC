@@ -4,8 +4,9 @@ import { withBasePath } from "@/lib/basePath";
 import ContactForm from "@/components/sections/ContactForm";
 import OfficesMap from "@/components/sections/OfficesMap";
 
-export default async function ContactPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale as Locale;
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   const t = await getTranslations(locale);
   const c = t.contact;
   const f = t.footer;

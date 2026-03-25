@@ -2,8 +2,9 @@ import { type Locale, getTranslations } from "@/lib/i18n";
 import Icon from "@/components/ui/Icon";
 import { withBasePath } from "@/lib/basePath";
 
-export default async function AboutPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale as Locale;
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   const t = await getTranslations(locale);
   const a = t.about;
   const isRtl = locale === "ar";

@@ -9,9 +9,10 @@ import CtaStrip from "@/components/sections/CtaStrip";
 export default async function HomePage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale as Locale;
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   const t = await getTranslations(locale);
 
   return (

@@ -1,8 +1,9 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
 import { withBasePath } from "@/lib/basePath";
 
-export default async function ProjectsPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale as Locale;
+export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: paramLocale } = await params;
+  const locale = paramLocale as Locale;
   const t = await getTranslations(locale);
   const p = t.projects;
   const isRtl = locale === "ar";
