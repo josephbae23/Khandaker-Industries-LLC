@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-cairo: 'Cairo', Arial, sans-serif;
+
+  --navy-950: #030912;
+  --navy-900: #070e1d;
+  --navy-800: #0e1d3a;
+  --navy-700: #162b56;
+  --navy-600: #1e3a72;
+  --navy-500: #2a4d8f;
+  --gold-500: #c9980a;
+  --gold-400: #fbbf24;
+  --gold-300: #fcd34d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-navy-800 antialiased;
+    font-family: var(--font-inter);
+  }
+
+  [dir="rtl"] body,
+  [lang="ar"] {
+    font-family: var(--font-cairo);
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-cairo);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-navy-800 leading-tight;
+  }
+
+  .section-title-ar {
+    font-family: var(--font-cairo);
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-navy-800 leading-tight;
+  }
+
+  .gold-line {
+    @apply block w-16 h-1 bg-gold-500 mt-4 mb-0;
+  }
+
+  .gold-line-center {
+    @apply block w-16 h-1 bg-gold-500 mx-auto mt-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-6 py-3 rounded-none transition-all duration-200 shadow-gold hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-navy-700 text-navy-700 hover:bg-navy-700 hover:text-white font-semibold px-6 py-3 rounded-none transition-all duration-200;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-navy-800 font-semibold px-6 py-3 rounded-none transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white border border-navy-100 shadow-card hover:shadow-card-hover transition-all duration-300;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-py {
+    @apply py-16 md:py-24;
+  }
+
+  .gold-badge {
+    @apply inline-flex items-center gap-2 text-gold-600 text-sm font-semibold tracking-widest uppercase border border-gold-300 bg-gold-50 px-4 py-1.5;
+  }
+}
+
+/* Geometric decorative lines */
+.geo-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(201,152,10,0.4), transparent);
+  height: 1px;
+  width: 100%;
+}
+
+/* Subtle dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(42,77,143,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f8f9fa; }
+::-webkit-scrollbar-thumb { background: var(--navy-500); border-radius: 3px; }
+
+/* Animate on scroll utility */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .gold-line {
+  margin-right: 0;
+}
