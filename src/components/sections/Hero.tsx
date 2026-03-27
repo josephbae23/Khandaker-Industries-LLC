@@ -136,7 +136,7 @@ export default function Hero({ locale, t }: HeroProps) {
 
           {/* Video (opposite side) */}
           <div
-            className={`hidden xl:flex ${
+            className={`hidden lg:flex ${
               textOnLeft ? "lg:order-2 justify-end" : "lg:order-1 justify-start"
             } items-center`}
           >
