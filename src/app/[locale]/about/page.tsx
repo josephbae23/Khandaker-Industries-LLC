@@ -8,6 +8,24 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations(locale);
   const a = t.about;
   const isRtl = locale === "ar";
+  const licenseDocuments = [
+    {
+      label: "Commercial Registration Certificate",
+      fileName: "CrCertificate.pdf",
+    },
+    {
+      label: "Investment Registration Certificate",
+      fileName: "Investment Registration Certificate 13 JUL.pdf",
+    },
+    {
+      label: "Construction Trade License",
+      fileName: "ks CONSTRUCTION TRADE.pdf",
+    },
+    {
+      label: "VAT Registration Certificate 2025",
+      fileName: "VAT Registration Certificate 2025_12_01.PDF",
+    },
+  ];
 
   return (
     <>
@@ -204,7 +222,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                   <Icon name={item.icon} className="w-6 h-6 text-gold-400" />
                 </div>
                 <h3 className="text-gold-400 font-semibold text-xl mb-3">{item.title}</h3>
-                <div className="w-8 h-0.5 bg-gold-500 mb-4" style={{ marginLeft: isRtl ? "auto" : "0", marginRight: isRtl ? "0" : "auto" }} />
+                <div className={`w-8 h-0.5 bg-gold-500 mb-4 ${isRtl ? "ml-auto" : "mr-auto"}`} />
                 <p className="text-white/60 text-base leading-relaxed">{item.text}</p>
               </div>
             ))}
@@ -253,6 +271,30 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <h3 className="text-navy-800 font-semibold text-base mb-4">
+                {isRtl ? "المستندات المرفقة" : "Attached Documents"}
+              </h3>
+              <ul className="space-y-3">
+                {licenseDocuments.map((doc) => (
+                  <li
+                    key={doc.fileName}
+                    className={`flex items-center gap-3 text-sm ${isRtl ? "flex-row-reverse" : ""}`}
+                  >
+                    <Icon name="FileText" className="w-4 h-4 text-gold-500" />
+                    <a
+                      href={withBasePath(`/Licenses & Registrations/${encodeURIComponent(doc.fileName)}`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-navy-700 hover:text-gold-600 transition-colors underline underline-offset-4"
+                    >
+                      {doc.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
