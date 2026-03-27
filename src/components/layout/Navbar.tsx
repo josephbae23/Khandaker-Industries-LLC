@@ -40,8 +40,8 @@ export default function Navbar({ locale, t }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy-800 shadow-navy py-3"
-          : "bg-transparent py-5"
+          ? "bg-navy-950/95 shadow-navy backdrop-blur-md border-b border-white/10 py-3"
+          : "bg-navy-950/70 backdrop-blur-sm border-b border-white/5 py-5"
       }`}
     >
       <div className="container-main">
@@ -122,7 +122,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-navy-900 border-t border-navy-700 mt-3">
+        <div className="lg:hidden bg-navy-950/95 backdrop-blur-md border-t border-white/10 mt-3">
           <div className="container-main py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
