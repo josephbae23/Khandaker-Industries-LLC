@@ -39,10 +39,10 @@ export default function Hero({ locale, t }: HeroProps) {
       </div>
 
       <div className="container-main relative z-10 pt-32 pb-20">
-        <div className="grid gap-10 lg:grid-cols-2 items-stretch">
+        <div className="flex flex-wrap items-stretch gap-10">
           {/* Text */}
           <div
-            className={`flex flex-col justify-center max-w-3xl ${
+            className={`flex flex-col justify-center flex-1 basis-[320px] min-w-0 max-w-full ${
               textOnLeft ? "lg:order-1" : "lg:order-2"
             } ${isLeft ? "text-left" : "text-right"}`}
           >
@@ -136,11 +136,11 @@ export default function Hero({ locale, t }: HeroProps) {
 
           {/* Video (opposite side) */}
           <div
-            className={`hidden lg:flex ${
+            className={`flex flex-1 basis-[320px] min-w-0 max-w-full ${
               textOnLeft ? "lg:order-2 justify-end" : "lg:order-1 justify-start"
             } items-center`}
           >
-            <div className="relative w-full max-w-3xl h-full min-h-[440px] overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative w-full max-w-3xl min-h-[280px] sm:min-h-[360px] lg:min-h-[440px] overflow-hidden rounded-2xl shadow-xl">
               <video
                 className="w-full h-full object-cover"
                 src={withBasePath("/video%20of%20hero.mp4")}
