@@ -10,7 +10,8 @@ export function getDir(locale: Locale): 'ltr' | 'rtl' {
   return locale === 'ar' ? 'rtl' : 'ltr';
 }
 
-export async function getTranslations(locale: Locale) {
-  const messages = await import(`@/messages/${locale}.json`);
+export async function getTranslations(locale: string) {
+  const safeLocale = isValidLocale(locale) ? locale : defaultLocale;
+  const messages = await import(`@/messages/${safeLocale}.json`);
   return messages.default;
 }
