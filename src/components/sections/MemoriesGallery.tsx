@@ -43,22 +43,22 @@ export default function MemoriesGallery({ locale, t }: MemoriesGalleryProps) {
   ];
 
   return (
-    <section className="section-py bg-navy-800 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy-800 to-navy-900" />
-      <div className="absolute inset-0 dot-pattern opacity-20" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/35 to-transparent" />
-      <div className="absolute top-0 right-0 w-[40%] h-full bg-gradient-to-l from-gold-300/25 to-transparent" />
+    <section className="section-py bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-sand-50 to-white" />
+      <div className="absolute inset-0 dot-pattern opacity-15" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300 to-transparent" />
+      <div className="absolute top-0 right-0 w-[40%] h-full bg-gradient-to-l from-gold-200/30 to-transparent" />
 
       <div className="container-main relative z-10">
         <div className={`mb-12 ${isRtl ? "font-arabic text-right" : "text-left"}`}>
-          <span className="inline-flex items-center gap-2 text-gold-300 text-sm font-semibold tracking-widest uppercase border border-gold-400/40 bg-gold-500/10 px-4 py-1.5">
+          <span className="gold-badge">
             {t.badge}
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-3">
+          <h2 className="section-title mt-4 mb-3">
             {t.title}
           </h2>
           <span className={`block h-1 bg-gold-gradient ${isRtl ? "mr-0 ml-auto" : "ml-0 mr-auto"} w-40`} />
-          <p className={`text-white/70 text-base mt-5 max-w-3xl ${isRtl ? "mr-0 ml-auto" : "ml-0 mr-auto"}`}>
+          <p className={`text-navy-600/70 text-base mt-5 max-w-3xl ${isRtl ? "mr-0 ml-auto" : "ml-0 mr-auto"}`}>
             {t.subtitle}
           </p>
         </div>
