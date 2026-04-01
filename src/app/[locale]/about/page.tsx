@@ -1,6 +1,7 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
 import Icon from "@/components/ui/Icon";
 import { withBasePath } from "@/lib/basePath";
+import LicenseGalleryPopup from "@/components/sections/LicenseGalleryPopup";
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: paramLocale } = await params;
@@ -11,19 +12,19 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const licenseDocuments = [
     {
       label: "Commercial Registration Certificate",
-      fileName: "CrCertificate.pdf",
+      fileName: "CrCertificate.jpeg",
+    },
+    {
+      label: "E-Trade License",
+      fileName: "E-Trade License.jpeg",
     },
     {
       label: "Investment Registration Certificate",
-      fileName: "Investment Registration Certificate 13 JUL.pdf",
-    },
-    {
-      label: "Construction Trade License",
-      fileName: "ks CONSTRUCTION TRADE.pdf",
+      fileName: "Investment Registration Certificate 13 JUL.jpeg",
     },
     {
       label: "VAT Registration Certificate 2025",
-      fileName: "VAT Registration Certificate 2025_12_01.PDF",
+      fileName: "VAT Registration Certifcate.jpg",
     },
   ];
 
@@ -276,24 +277,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               <h3 className="text-navy-800 font-semibold text-base mb-4">
                 {isRtl ? "المستندات المرفقة" : "Attached Documents"}
               </h3>
-              <ul className="space-y-3">
-                {licenseDocuments.map((doc) => (
-                  <li
-                    key={doc.fileName}
-                    className={`flex items-center gap-3 text-sm ${isRtl ? "flex-row-reverse" : ""}`}
-                  >
-                    <Icon name="FileText" className="w-4 h-4 text-gold-500" />
-                    <a
-                      href={withBasePath(`/Licenses & Registrations/${encodeURIComponent(doc.fileName)}`)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-navy-700 hover:text-gold-600 transition-colors underline underline-offset-4"
-                    >
-                      {doc.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <LicenseGalleryPopup items={licenseDocuments} isRtl={isRtl} />
             </div>
           </div>
         </div>
