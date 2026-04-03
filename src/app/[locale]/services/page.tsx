@@ -58,9 +58,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                       <Icon name={service.icon} className="w-7 h-7 text-gold-400" />
                     </div>
 
-                    <div className="text-gold-500/50 font-display text-xs tracking-widest uppercase font-bold mb-1">
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
                     <h2 className="text-navy-800 font-bold text-2xl md:text-3xl mb-2 font-display">
                       {service.title}
                     </h2>
@@ -88,10 +85,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-transparent to-navy-900/50" />
                     <div className="absolute inset-0 dot-pattern opacity-20" />
-                    {/* Number overlay */}
-                    <div className="absolute bottom-6 right-6 text-white/10 font-display text-9xl font-bold leading-none select-none">
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
                   </div>
                 </div>
               );

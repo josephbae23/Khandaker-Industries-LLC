@@ -149,18 +149,18 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             ].map((member) => (
               <div
                 key={member.name}
-                className={`border border-navy-100 shadow-card p-6 bg-white hover:shadow-card-hover transition-all duration-300 ${
+                className={`border border-navy-100 shadow-card p-5 bg-white hover:shadow-card-hover transition-all duration-300 ${
                   isRtl ? "text-right" : "text-left"
                 }`}
               >
                 <div className="relative mb-6">
-                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
+                  <div className="relative w-full aspect-[3/4] overflow-hidden">
                     <img
                       src={withBasePath(member.image)}
                       alt={member.name}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover object-center sm:object-[center_20%] transition-transform duration-500 hover:scale-[1.03]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/35 via-transparent to-transparent" />
                   </div>
                 </div>
 
@@ -179,23 +179,42 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             ))}
           </div>
 
-          <div className="mt-12 max-w-3xl mx-auto border border-navy-100 bg-sand-50 p-6 md:p-8">
-            <h3 className={`text-navy-800 font-semibold text-xl mb-4 ${isRtl ? "text-right" : "text-left"}`}>
+        </div>
+      </section>
+
+      {/* Our Commitment */}
+      <section className="section-py bg-sand-50 relative overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-10" />
+        <div className="container-main relative z-10">
+          <div className={`max-w-5xl mx-auto ${isRtl ? "text-right" : "text-left"}`}>
+            <span className="gold-badge">{isRtl ? "التزامنا" : a.commitment_title ?? "Our Commitment"}</span>
+            <h2 className={`section-title mt-4 mb-3 ${isRtl ? "font-arabic" : ""}`}>
               {a.commitment_title ?? "Our Commitment"}
-            </h3>
-            <p className={`text-navy-600/80 text-sm mb-4 ${isRtl ? "text-right" : "text-left"}`}>
+            </h2>
+            <p className="text-navy-600/70 text-base md:text-lg leading-relaxed max-w-3xl">
               {a.commitment_intro ?? "Together, our leadership team is committed to:"}
             </p>
-            <ul className={`space-y-2 text-navy-700 text-sm list-disc ${isRtl ? "pr-5 text-right" : "pl-5 text-left"}`}>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
               {(a.commitment_items ?? [
                 "Delivering excellence in every service",
                 "Building lasting relationships based on trust",
                 "Driving innovation and continuous improvement",
                 "Upholding the highest standards of integrity and professionalism",
               ]).map((item: string, idx: number) => (
-                <li key={idx}>{item}</li>
+                <div
+                  key={idx}
+                  className={`group bg-white/90 backdrop-blur-sm p-6 shadow-card hover:shadow-card-hover transition-all duration-300 ${
+                    isRtl ? "text-right" : "text-left"
+                  }`}
+                >
+                  <div className="w-11 h-11 bg-gold-500/15 flex items-center justify-center mb-4">
+                    <span className="text-gold-500 font-display text-lg font-bold">0{idx + 1}</span>
+                  </div>
+                  <p className="text-navy-700 text-base leading-relaxed">{item}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>

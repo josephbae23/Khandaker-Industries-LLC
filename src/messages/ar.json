@@ -39,27 +39,27 @@
     ]
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "End-to-end workforce and travel solutions trusted by leading Saudi enterprises.",
+    "title": "خدماتنا",
+    "subtitle": "حلول متكاملة للقوى العاملة والسفر تحظى بثقة كبرى المؤسسات في المملكة العربية السعودية.",
     "items": [
       {
-        "title": "Manpower Supply",
-        "desc": "Sourcing and deploying skilled, semi-skilled, and unskilled workers for construction, hospitality, healthcare, and industrial sectors.",
+        "title": "توريد العمالة",
+        "desc": "استقطاب وتوظيف ونشر العمالة الماهرة ونصف الماهرة وغير الماهرة لقطاعات البناء والضيافة والرعاية الصحية والقطاعات الصناعية.",
         "icon": "Users"
       },
       {
-        "title": "Visa Processing",
-        "desc": "Full-cycle visa facilitation — employment, business, and family visas — handled with precision and regulatory compliance.",
+        "title": "معالجة التأشيرات",
+        "desc": "خدمات متكاملة لمعالجة التأشيرات من البداية إلى النهاية، بما في ذلك تأشيرات العمل والأعمال والزيارة العائلية، بدقة والتزام تنظيمي كامل.",
         "icon": "FileText"
       },
       {
-        "title": "Travel Solutions",
-        "desc": "Air ticketing, accommodation, insurance, and travel documentation managed seamlessly for individuals and corporate groups.",
+        "title": "حلول السفر",
+        "desc": "إدارة سلسة لحجوزات الطيران والإقامة والتأمين ومستندات السفر للأفراد والمجموعات المؤسسية.",
         "icon": "Plane"
       },
       {
-        "title": "Corporate HR Consulting",
-        "desc": "Strategic workforce planning, compliance advisory, and HR documentation support for businesses operating across Saudi Arabia.",
+        "title": "استشارات الموارد البشرية للشركات",
+        "desc": "تخطيط استراتيجي للقوى العاملة، واستشارات الامتثال، ودعم وثائق الموارد البشرية للشركات العاملة في مختلف مناطق المملكة العربية السعودية.",
         "icon": "BarChart"
       }
     ]

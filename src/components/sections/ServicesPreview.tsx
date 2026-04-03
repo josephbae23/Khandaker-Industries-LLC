@@ -63,11 +63,6 @@ export default function ServicesPreview({ locale, t }: ServicesPreviewProps) {
                   <div className="absolute top-0 right-0 w-0 h-0 border-l-[40px] border-l-transparent border-t-[40px] border-t-gold-400/10 group-hover:border-t-gold-400/30 transition-colors" />
                 )}
 
-                {/* Number */}
-                <div className={`text-navy-100 font-display text-5xl font-bold absolute bottom-4 select-none ${isRtl ? "left-4" : "right-4"}`}>
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-
                 {/* Icon */}
                 <div className={`w-12 h-12 bg-navy-50 border border-navy-100 flex items-center justify-center mb-5 group-hover:bg-navy-800 group-hover:border-navy-800 transition-colors duration-300 ${isRtl ? "ml-auto" : ""}`}>
                   <Icon name={item.icon} className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />

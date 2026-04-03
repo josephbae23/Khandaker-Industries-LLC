@@ -97,10 +97,6 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                 </h3>
                 <div className={`w-8 h-0.5 bg-gold-400 mb-3 ${isRtl ? "ml-auto mr-0" : "ml-0 mr-auto"}`} />
                 <p className="text-navy-600/60 text-sm leading-relaxed">{project.desc}</p>
-
-                <div className="mt-5 text-[11px] font-display text-navy-300 tracking-wider">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
               </div>
             ))}
           </div>
