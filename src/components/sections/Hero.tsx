@@ -60,7 +60,13 @@ export default function Hero({ locale, t }: HeroProps) {
             {t.subtext}
           </p>
 
-          <div className={`flex flex-col sm:flex-row gap-4 ${isRtl ? "sm:flex-row-reverse" : ""}`}>
+          <div
+            className={`flex flex-col sm:flex-row gap-4 ${
+              isRtl
+                ? "items-end sm:flex-row-reverse sm:justify-end"
+                : "items-start sm:justify-start"
+            }`}
+          >
             <a
               href="https://wa.me/966562143690"
               target="_blank"
