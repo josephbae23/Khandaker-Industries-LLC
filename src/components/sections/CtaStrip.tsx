@@ -37,7 +37,7 @@ export default function CtaStrip({ locale, t }: CtaStripProps) {
             {t.btn}
           </Link>
           <a
-            href="https://wa.me/8801772909679"
+            href="https://wa.me/966562143690"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-white text-base px-10 py-4"

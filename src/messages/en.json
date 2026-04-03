@@ -132,8 +132,8 @@
       "label": "Jeddah Office",
       "address": "Office No. 12, 3rd Floor, Al-Rashid Tower, King Abdulaziz Street, Al-Balad District, Jeddah 21411, Saudi Arabia"
     },
-    "phone": "+880 1772-909679, +880 1718-720926",
-    "phone_jeddah": "+966 55 123 4567 (KSA), +880 1772-909679 (Bangladesh)",
+    "phone": "+880 1772-909679, +880 1538-002513",
+    "phone_jeddah": "+966 56 214 3690, +966 57 286 3218",
     "email": "ksgroup2201@gmail.com",
     "copyright": "© 2024 Khandaker Industries LLC. All rights reserved.",
     "links": ["Privacy Policy", "Terms of Service"]
@@ -142,7 +142,19 @@
     "hero_title": "Our Story",
     "hero_sub": "17 years of integrity, excellence, and cross-border impact.",
     "story_title": "Who We Are",
-    "story": "Founded in 2007 in Dhaka, Bangladesh, Khandaker Industries LLC was born with a singular mission: to create dignified, life-changing employment opportunities for Bangladeshi workers in the Kingdom of Saudi Arabia. As a Saudi-approved LLC and sister concern of the KS Group, we operate under the highest standards of recruitment ethics, regulatory compliance, and candidate welfare.\n\nOur experienced team spans two countries, managing the full cycle from candidate sourcing and skills verification, through visa processing and travel coordination, to post-placement support — ensuring every worker arrives prepared and every employer receives reliable, qualified personnel.",
+    "story": "Khandaker Industries LLC is built on a legacy that began in Bangladesh with KS Group, where our journey first took shape with a clear purpose: to create meaningful opportunities and deliver dependable business solutions.\n\nOver the years, that foundation of trust, experience, and commitment has evolved into a dynamic international presence. Today, as a Saudi-approved LLC and a proud extension of KS Group, we operate with a strong focus on integrity, compliance, and excellence across every aspect of our services.\n\nOur expertise spans the complete service cycle, from talent sourcing and skills verification to visa processing, travel coordination, and post-placement support. With operations connecting Bangladesh and the Kingdom of Saudi Arabia, we ensure every client receives reliable, efficient, and professional service, while every individual is supported with care and dignity.\n\nDriven by experience and guided by values, we continue to grow as a trusted partner, delivering solutions that create lasting impact for both businesses and people.",
+    "leadership_badge": "About Our Leadership",
+    "leadership_title": "Our Leadership Team",
+    "leadership_intro_1": "At Khandaker Industries LLC, our leadership team is the driving force behind our success, bringing together vision, experience, and a shared commitment to excellence. With a forward-thinking approach and strong ethical foundation, our leaders guide the organization toward sustainable growth, innovation, and long-term value creation.",
+    "leadership_intro_2": "Their collective expertise across manpower, travel, and visa services ensures that we consistently deliver reliable solutions while maintaining the highest standards of professionalism. Through strategic direction and operational excellence, our leadership continues to strengthen our position as a trusted name in the industry.",
+    "commitment_title": "Our Commitment",
+    "commitment_intro": "Together, our leadership team is committed to:",
+    "commitment_items": [
+      "Delivering excellence in every service",
+      "Building lasting relationships based on trust",
+      "Driving innovation and continuous improvement",
+      "Upholding the highest standards of integrity and professionalism"
+    ],
     "mission_title": "Mission",
     "mission": "To be the most trusted bridge between Bangladesh's skilled workforce and Saudi Arabia's labor market — delivering ethical, efficient, and end-to-end manpower and travel solutions.",
     "vision_title": "Vision",
@@ -154,6 +166,40 @@
       { "title": "Compliance", "desc": "Full adherence to Saudi and Bangladeshi labor law at all times." }
     ],
     "licenses_title": "Licenses & Registrations",
+    "team": {
+      "khondaker_shahjahan": {
+        "name": "Khandaker Shahjahan",
+        "title": "Managing Director",
+        "quote": [
+          "As the Managing Director, Khandaker Shahjahan leads the organization with a clear vision and unwavering determination. His leadership is defined by strategic foresight, innovation, and a deep understanding of global business dynamics. Under his guidance, the company has expanded its capabilities and strengthened its market presence.",
+          "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries LLC."
+        ]
+      },
+      "md_sohel_rana": {
+        "name": "Sohel Rana",
+        "title": "Director",
+        "quote": [
+          "Sohel Rana plays a vital role in overseeing operations and ensuring consistent service quality across all sectors. With a strong commitment to efficiency and performance, he contributes to maintaining the company's high standards and client satisfaction.",
+          "His practical approach and dedication to excellence support the organization's mission to deliver reliable and professional services, reinforcing its reputation in both corporate and individual sectors."
+        ]
+      },
+      "md_muktar_husen": {
+        "name": "Md Muktar Hussen",
+        "title": "Director",
+        "quote": [
+          "Md Muktar Hussen brings a results-oriented mindset and a focus on continuous improvement. His leadership supports the company's operational strength and growth initiatives, ensuring that every service meets client expectations.",
+          "With an emphasis on innovation, collaboration, and accountability, he plays a key role in transforming strategic goals into tangible outcomes, contributing to the company's ongoing success."
+        ]
+      },
+      "md_ziaur_rahman": {
+        "name": "Md Ziaur Rahman",
+        "title": "Director",
+        "quote": [
+          "Md Ziaur Rahman provides valuable experience and insight that support the company's long-term vision. His commitment to integrity, trust, and disciplined growth helps guide the organization toward stability and sustained success.",
+          "He remains focused on strengthening client relationships and upholding the company's core values, ensuring that Khandaker Industries LLC continues to grow with confidence and credibility."
+        ]
+      }
+    },
     "licenses": [
       "Bangladesh BOESL (Bureau of Manpower, Employment and Training) License",
       "Saudi Ministry of Human Resources — Registered Recruitment Agency",

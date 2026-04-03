@@ -9,6 +9,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations(locale);
   const a = t.about;
   const isRtl = locale === "ar";
+  const storyCover = "/cover/WhatsApp%20Image%202026-04-02%20at%2011.54.49%20AM.jpeg";
   const licenseDocuments = [
     {
       label: "Commercial Registration Certificate",
@@ -63,17 +64,15 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               ))}
             </div>
 
-            {/* Visual placeholder */}
+            {/* Story cover */}
             <div className="order-1 lg:order-2 relative">
-              <div className="relative bg-navy-900 h-80 lg:h-[500px] overflow-hidden flex items-center justify-center">
-                {/* Decorative image placeholder */}
-                <div className="absolute inset-0 dot-pattern opacity-30" />
+              <div className="relative bg-navy-900 h-80 lg:h-[500px] overflow-hidden">
                 <img
-                  src={withBasePath("/logo.png")}
-                  alt="Khandaker Industries"
-                  className="relative z-10 w-32 h-32 object-contain"
+                  src={withBasePath(storyCover)}
+                  alt={isRtl ? "صورة الغلاف - قصتنا" : "Our story cover image"}
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-navy-900/50 via-transparent to-gold-500/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-navy-900/45 via-transparent to-gold-500/10" />
               </div>
               {/* Stats card */}
               <div className="absolute -bottom-6 -left-6 bg-white border border-navy-100 shadow-card p-6">
@@ -91,81 +90,59 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="section-py bg-white">
         <div className="container-main">
           <div className={`text-center mb-12 ${isRtl ? "font-arabic" : ""}`}>
-            <span className="gold-badge">{isRtl ? "فريقنا" : "Our Team"}</span>
-            <h2 className="section-title mt-4 mb-2">{isRtl ? "القيادة" : "Leadership"}</h2>
+            <span className="gold-badge">{a.leadership_badge ?? (isRtl ? "فريقنا" : "About Our Leadership")}</span>
+            <h2 className="section-title mt-4 mb-2">{a.leadership_title ?? (isRtl ? "القيادة" : "Our Leadership Team")}</h2>
             <span className="gold-line-center" />
+
+            <div className={`max-w-4xl mx-auto mt-6 text-navy-600/80 text-base leading-relaxed space-y-4 ${isRtl ? "text-right" : "text-left md:text-center"}`}>
+              <p>
+                {a.leadership_intro_1 ?? "At Khandaker Industries LLC, our leadership team is the driving force behind our success."}
+              </p>
+              <p>
+                {a.leadership_intro_2 ?? "Through strategic direction and operational excellence, our leadership strengthens our position as a trusted name in the industry."}
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 key: "khondaker_shahjahan",
-                name: "KHANDAKER SHAHJAHAN",
-                title: "MANAGING DIRECTOR",
+                name: "Khandaker Shahjahan",
+                title: "Managing Director",
                 quote: [
-                  "Khandaker Industries LLC",
-                  "represents growth through hard",
-                  "work and vision. From",
-                  "manpower to travel and visa",
-                  "services, our mission is to",
-                  "deliver excellence with honesty",
-                  "and care. We believe every",
-                  "achievement comes from",
-                  "dedication — and we continue",
-                  "to build that legacy with pride.",
+                  "As the Managing Director, Khandaker Shahjahan leads the organization with a clear vision and unwavering determination. His leadership is defined by strategic foresight, innovation, and a deep understanding of global business dynamics. Under his guidance, the company has expanded its capabilities and strengthened its market presence.",
+                  "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries LLC.",
                 ],
                 image: "/team/KHANDAKER SHAHJAHAN.jpeg",
               },
               {
                 key: "md_sohel_rana",
-                name: "MD SOHEL RANA",
-                title: "DIRECTOR",
+                name: "Sohel Rana",
+                title: "Director",
                 quote: [
-                  "At Khandaker Industries LLC, we",
-                  "believe success is built step by step",
-                  "— with trust, teamwork, and",
-                  "commitment. Every project we",
-                  "complete is a reflection of our",
-                  "passion and professionalism. Our",
-                  "team’s dedication to service",
-                  "excellence has made us a trusted",
-                  "name in both corporate and",
-                  "personal travel sectors.",
+                  "Sohel Rana plays a vital role in overseeing operations and ensuring consistent service quality across all sectors. With a strong commitment to efficiency and performance, he contributes to maintaining the company\'s high standards and client satisfaction.",
+                  "His practical approach and dedication to excellence support the organization\'s mission to deliver reliable and professional services, reinforcing its reputation in both corporate and individual sectors.",
                 ],
                 image: "/team/MD SOHEL RANA.jpeg",
               },
               {
                 key: "md_muktar_husen",
-                name: "MD MUKTAR HUSSEN",
-                title: "DIRECTOR",
+                name: "Md Muktar Hussen",
+                title: "Director",
                 quote: [
-                  "At Khandaker Industries LLC, we",
-                  "don’t just provide services — we",
-                  "build bridges of hope, ambition,",
-                  "and progress. Our team’s",
-                  "dedication and our clients’ trust",
-                  "are the stars that guide our",
-                  "journey. Together, we continue",
-                  "to grow, to inspire, and to turn",
-                  "dreams into destinations.",
+                  "Md Muktar Hussen brings a results-oriented mindset and a focus on continuous improvement. His leadership supports the company\'s operational strength and growth initiatives, ensuring that every service meets client expectations.",
+                  "With an emphasis on innovation, collaboration, and accountability, he plays a key role in transforming strategic goals into tangible outcomes, contributing to the company\'s ongoing success.",
                 ],
                 image: "/team/MD MUKTAR HUSEN.jpeg",
               },
               {
                 key: "md_ziaur_rahman",
-                name: "MD ZIAUR RAHMAN",
-                title: "DIRECTOR",
+                name: "Md Ziaur Rahman",
+                title: "Director",
                 quote: [
-                  "Since our journey began in 2007,",
-                  "Khandaker Industries LLC has",
-                  "stood for trust, dedication, and",
-                  "integrity. We started with a dream",
-                  "to connect people and",
-                  "opportunities — today that dream",
-                  "has become a proud reality. Our",
-                  "success is built on teamwork,",
-                  "quality service, and the confidence",
-                  "of our valued clients.",
+                  "Md Ziaur Rahman provides valuable experience and insight that support the company\'s long-term vision. His commitment to integrity, trust, and disciplined growth helps guide the organization toward stability and sustained success.",
+                  "He remains focused on strengthening client relationships and upholding the company\'s core values, ensuring that Khandaker Industries LLC continues to grow with confidence and credibility.",
                 ],
                 image: "/team/MD ZIAUR RAHMAN.jpeg",
               },
@@ -188,23 +165,37 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 </div>
 
                 <h3 className="text-navy-800 font-semibold text-xl mb-1">
-                  {member.name}
+                  {a.team?.[member.key ?? ""]?.name ?? member.name}
                 </h3>
                 <div className="text-gold-500 text-sm font-semibold mb-4">
-                  {isRtl
-                    ? a.team?.[member.key ?? ""]?.title ?? member.title
-                    : member.title}
+                  {a.team?.[member.key ?? ""]?.title ?? member.title}
                 </div>
                 <div className="text-navy-600/80 text-sm leading-relaxed space-y-2">
-                  {(isRtl
-                    ? a.team?.[member.key ?? ""]?.quote
-                    : member.quote
-                  )?.map((line: string, idx: number) => (
+                  {(a.team?.[member.key ?? ""]?.quote ?? member.quote)?.map((line: string, idx: number) => (
                     <p key={idx}>{line}</p>
                   ))}
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 max-w-3xl mx-auto border border-navy-100 bg-sand-50 p-6 md:p-8">
+            <h3 className={`text-navy-800 font-semibold text-xl mb-4 ${isRtl ? "text-right" : "text-left"}`}>
+              {a.commitment_title ?? "Our Commitment"}
+            </h3>
+            <p className={`text-navy-600/80 text-sm mb-4 ${isRtl ? "text-right" : "text-left"}`}>
+              {a.commitment_intro ?? "Together, our leadership team is committed to:"}
+            </p>
+            <ul className={`space-y-2 text-navy-700 text-sm list-disc ${isRtl ? "pr-5 text-right" : "pl-5 text-left"}`}>
+              {(a.commitment_items ?? [
+                "Delivering excellence in every service",
+                "Building lasting relationships based on trust",
+                "Driving innovation and continuous improvement",
+                "Upholding the highest standards of integrity and professionalism",
+              ]).map((item: string, idx: number) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -17,6 +17,38 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
     "border-red-400/40 text-red-400",
   ];
 
+  const arrohaPhotos = [
+    "WhatsApp Image 2026-03-27 at 6.20.05 PM.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.05 PM 2.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.05 PM 3.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.06 PM 4.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.06 PM 5.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.07 PM 6.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.07 PM 7.jpeg",
+  ];
+
+  const wadibedPhotos = [
+    "WhatsApp Image 2026-03-27 at 6.20.20 PM 8.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.21 PM 10.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.21 PM 11.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.21 PM 9.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.22 PM 12.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.22 PM 13.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.22 PM 14.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.23 PM 15.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.23 PM 16.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.23 PM 17.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.24 PM 18.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.24 PM 19.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.25 PM 20.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.25 PM 21.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.25 PM 22.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.26 PM 23.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.26 PM 24.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.26 PM 25.jpeg",
+    "WhatsApp Image 2026-03-27 at 6.20.27 PM 26.jpeg",
+  ];
+
   return (
     <>
       {/* Hero */}
@@ -43,50 +75,100 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
             {p.items.map((project: { title: string; tags: string[]; desc: string }, i: number) => (
               <div
                 key={i}
-                className={`group card p-0 overflow-hidden hover:-translate-y-1 transition-all duration-300 ${isRtl ? "text-right" : "text-left"}`}
+                className={`group card p-6 overflow-hidden hover:-translate-y-1 transition-all duration-300 ${isRtl ? "text-right" : "text-left"}`}
               >
-                {/* Visual header */}
-                <div className="relative h-40 bg-navy-800 overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 dot-pattern opacity-30" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-navy-800 to-navy-950" />
-                  {/* Logo */}
-                  <img
-                    src={withBasePath("/logo.png")}
-                    alt="Khandaker Industries"
-                    className="relative z-10 w-16 h-16 object-contain opacity-40 group-hover:opacity-70 transition-opacity"
-                  />
-                  {/* Index */}
-                  <div className="absolute top-4 left-4 text-white/10 font-display font-bold text-5xl leading-none">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  {/* Hover gold line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold-gradient transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                {/* Content */}
+                {/* Tags */}
+                <div className={`flex flex-wrap gap-2 mb-3 ${isRtl ? "justify-end" : ""}`}>
+                  {project.tags.map((tag, ti) => (
+                    <span
+                      key={tag}
+                      className={`text-[10px] font-semibold tracking-widest uppercase border px-2 py-0.5 ${
+                        tagColors[ti % tagColors.length]
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  {/* Tags */}
-                  <div className={`flex flex-wrap gap-2 mb-3 ${isRtl ? "justify-end" : ""}`}>
-                    {project.tags.map((tag, ti) => (
-                      <span
-                        key={tag}
-                        className={`text-[10px] font-semibold tracking-widest uppercase border px-2 py-0.5 ${
-                          tagColors[ti % tagColors.length]
-                        }`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="text-navy-800 font-semibold text-lg mb-2 group-hover:text-gold-600 transition-colors">
+                  {project.title}
+                </h3>
+                <div className={`w-8 h-0.5 bg-gold-400 mb-3 ${isRtl ? "ml-auto mr-0" : "ml-0 mr-auto"}`} />
+                <p className="text-navy-600/60 text-sm leading-relaxed">{project.desc}</p>
 
-                  <h3 className="text-navy-800 font-semibold text-lg mb-2 group-hover:text-gold-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="w-8 h-0.5 bg-gold-400 mb-3" style={{ marginLeft: isRtl ? "auto" : "0", marginRight: isRtl ? "0" : "auto" }} />
-                  <p className="text-navy-600/60 text-sm leading-relaxed">{project.desc}</p>
+                <div className="mt-5 text-[11px] font-display text-navy-300 tracking-wider">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Projects Gallery */}
+      <section className="section-py bg-sand-50 border-y border-navy-100">
+        <div className="container-main">
+          <div className={`mb-8 ${isRtl ? "text-right" : "text-left"}`}>
+            <span className="gold-badge">{isRtl ? "مشاريعنا الحديثة" : "Our Recent Projects"}</span>
+            <h2 className={`section-title mt-4 mb-2 ${isRtl ? "font-arabic" : ""}`}>
+              {isRtl ? "معرض المشاريع الحديثة" : "Recent Projects Gallery"}
+            </h2>
+            <span className={isRtl ? "block w-16 h-1 bg-gold-500 mt-3 mb-4 mr-auto" : "gold-line mb-4"} />
+            <p className="text-navy-600/70 text-sm md:text-base max-w-2xl">
+              {isRtl
+                ? "صور ميدانية حديثة من مشروعي Arroha وWadibed."
+                : "Latest field photos from Arroha Project and Wadibed Project."}
+            </p>
+          </div>
+
+          <div className="mb-10">
+            <div className="mb-3">
+              <h3 className={`text-navy-800 text-xl md:text-2xl font-semibold ${isRtl ? "font-arabic" : "font-display"}`}>
+                Arroha Project
+              </h3>
+            </div>
+
+            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+              {arrohaPhotos.map((fileName) => (
+                <figure
+                  key={fileName}
+                  className="group mb-4 break-inside-avoid overflow-hidden bg-transparent"
+                >
+                  <img
+                    src={withBasePath(`/projects/${encodeURIComponent(fileName)}`)}
+                    alt="Arroha Project"
+                    className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]"
+                    loading="lazy"
+                  />
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="mb-3">
+              <h3 className={`text-navy-800 text-xl md:text-2xl font-semibold ${isRtl ? "font-arabic" : "font-display"}`}>
+                Wadibed Project
+              </h3>
+            </div>
+
+            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+              {wadibedPhotos.map((fileName) => (
+                <figure
+                  key={fileName}
+                  className="group mb-4 break-inside-avoid overflow-hidden bg-transparent"
+                >
+                  <img
+                    src={withBasePath(`/projects/${encodeURIComponent(fileName)}`)}
+                    alt="Wadibed Project"
+                    className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]"
+                    loading="lazy"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
