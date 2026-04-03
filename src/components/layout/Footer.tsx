@@ -49,19 +49,6 @@ export default function Footer({ locale, t }: FooterProps) {
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">{t.tagline}</p>
-
-            {/* Social Icons */}
-            <div className={`flex gap-3 mt-5 ${isRtl ? "flex-row-reverse justify-end" : ""}`}>
-              {["FB", "LI", "WA", "TW"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/50 hover:border-gold-400 hover:text-gold-400 transition-colors text-xs font-semibold"
-                >
-                  {s}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
