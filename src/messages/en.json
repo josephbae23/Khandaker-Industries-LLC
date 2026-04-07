@@ -104,12 +104,12 @@
     "title": "Our Journey",
     "subtitle": "Over 17 years of building trust between Bangladesh and Saudi Arabia.",
     "items": [
-      { "year": "2007", "event": "Founded in Dhaka as a licensed manpower recruitment agency." },
-      { "year": "2010", "event": "Received Saudi Government approval; first deployment batch of 300 workers." },
-      { "year": "2014", "event": "Opened Jeddah office; expanded to hospitality and healthcare sectors." },
-      { "year": "2018", "event": "Reached 2,500 total placements; launched visa processing division." },
-      { "year": "2021", "event": "Established sister concern KS Group; diversified into travel solutions." },
-      { "year": "2024", "event": "Surpassed 5,000 successful placements. Active Vision 2030 partner." }
+      { "year": "2007", "event": "Established in Dhaka as a licensed manpower recruitment agency, laying the groundwork for trusted international partnerships." },
+      { "year": "2010", "event": "Received official approval from the Saudi Government and successfully deployed our first batch of 300 skilled workers." },
+      { "year": "2014", "event": "Opened our Jeddah office, strengthening our presence in Saudi Arabia and expanding into hospitality and healthcare sectors." },
+      { "year": "2018", "event": "Achieved 2,500+ successful placements and launched our dedicated visa processing division to provide end-to-end solutions." },
+      { "year": "2021", "event": "Founded our sister concern, KS Group, and diversified into comprehensive travel and mobility services." },
+      { "year": "2024", "event": "Surpassed 5,000 successful placements and became an active partner in Saudi Arabia's Vision 2030 initiative." }
     ]
   },
   "cta_strip": {
@@ -134,7 +134,7 @@
     },
     "phone": "+880 1772-909679, +880 1538-002513",
     "phone_jeddah": "+966 56 214 3690, +966 57 286 3218",
-    "email": "ksgroup2201@gmail.com",
+    "email": "k.industriesllc.ksg@gmail.com",
     "copyright": "© 2024 Khandaker Industries LLC. All rights reserved.",
     "links": ["Privacy Policy", "Terms of Service"]
   },
@@ -156,7 +156,7 @@
       "Upholding the highest standards of integrity and professionalism"
     ],
     "mission_title": "Mission",
-    "mission": "To be the most trusted bridge between Bangladesh's skilled workforce and Saudi Arabia's labor market — delivering ethical, efficient, and end-to-end manpower and travel solutions.",
+    "mission": "To connect talent with opportunity by building a reliable bridge between Bangladesh and Saudi Arabia. We are committed to delivering ethical, transparent, and fully integrated manpower and travel solutions that meet global standards. Through professionalism, efficiency, and deep market understanding, we empower skilled individuals while supporting our partners with dependable workforce solutions tailored to their needs.",
     "vision_title": "Vision",
     "vision": "To be the leading South Asian manpower and services company recognized across the Gulf for excellence, transparency, and the human dignity we uphold in every placement.",
     "values": [

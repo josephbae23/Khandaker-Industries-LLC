@@ -25,6 +25,10 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
     "WhatsApp Image 2026-03-27 at 6.20.06 PM 5.jpeg",
     "WhatsApp Image 2026-03-27 at 6.20.07 PM 6.jpeg",
     "WhatsApp Image 2026-03-27 at 6.20.07 PM 7.jpeg",
+    "WhatsApp Image 2026-04-05 at 11.34.28 AM.jpeg",
+    "WhatsApp Image 2026-04-05 at 11.34.28 AM (1).jpeg",
+    "WhatsApp Image 2026-04-05 at 11.34.29 AM.jpeg",
+    "WhatsApp Image 2026-04-05 at 11.34.29 AM (1).jpeg",
   ];
 
   const wadibedPhotos = [
