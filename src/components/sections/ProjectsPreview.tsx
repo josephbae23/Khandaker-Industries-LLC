@@ -54,14 +54,6 @@ export default function ProjectsPreview({ locale, t }: ProjectsPreviewProps) {
                 {project.title}
               </h3>
               <p className="text-white/50 text-sm leading-relaxed">{project.desc}</p>
-
-              {/* Hover arrow */}
-              <div className={`mt-4 flex ${isRtl ? "justify-end flex-row-reverse" : ""} items-center gap-2 text-gold-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity`}>
-                <span>{isRtl ? "اقرأ المزيد" : "Learn More"}</span>
-                <svg className={`w-4 h-4 ${isRtl ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
             </div>
           ))}
         </div>
