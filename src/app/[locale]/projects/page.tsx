@@ -1,5 +1,4 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
-import { withBasePath } from "@/lib/basePath";
 
 export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: paramLocale } = await params;
@@ -63,11 +62,11 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
 
         <div className="container-main relative z-10">
           <div className={isRtl ? "text-right" : "text-left"}>
-            <span className="gold-badge">{isRtl ? "إنجازاتنا" : "Our Portfolio"}</span>
-            <h1 className={`font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-4 leading-tight ${isRtl ? "font-arabic" : ""}`}>
+            <span className="gold-badge text-xs sm:text-sm">{isRtl ? "إنجازاتنا" : "Our Portfolio"}</span>
+            <h1 className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mt-3 sm:mt-4 leading-tight ${isRtl ? "font-arabic" : ""}`}>
               {p.title}
             </h1>
-            <p className="text-white/50 text-lg mt-4 max-w-xl">{p.subtitle}</p>
+            <p className="text-white/50 text-sm sm:text-base md:text-lg mt-3 sm:mt-4 max-w-xl">{p.subtitle}</p>
           </div>
         </div>
       </section>

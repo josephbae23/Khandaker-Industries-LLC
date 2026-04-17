@@ -31,8 +31,8 @@ export default function Footer({ locale, t }: FooterProps) {
       {/* Top Strip */}
       <div className="bg-gold-gradient h-1" />
 
-      <div className="container-main py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div className="container-main py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-12">
           {/* Brand */}
           <div className={`lg:col-span-1 ${isRtl ? "text-right" : "text-left"}`}>
             <Link href={`/${locale}`} className="flex items-center gap-3 mb-4" style={{ flexDirection: isRtl ? "row-reverse" : "row", justifyContent: isRtl ? "flex-end" : "flex-start" }}>
@@ -100,7 +100,7 @@ export default function Footer({ locale, t }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-white/40 text-xs">{t.copyright}</p>
           <div className={`flex items-center gap-4 ${isRtl ? "flex-row-reverse" : ""}`}>
             {t.links.map((link) => (

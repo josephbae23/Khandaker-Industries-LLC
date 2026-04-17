@@ -1,6 +1,5 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
 import Icon from "@/components/ui/Icon";
-import { withBasePath } from "@/lib/basePath";
 import LicenseGalleryPopup from "@/components/sections/LicenseGalleryPopup";
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -40,11 +39,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
         <div className="container-main relative z-10">
           <div className={isRtl ? "text-right" : "text-left"}>
-            <span className="gold-badge">{isRtl ? "من نحن" : "About Us"}</span>
-            <h1 className={`font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-4 leading-tight ${isRtl ? "font-arabic" : ""}`}>
+            <span className="gold-badge text-xs sm:text-sm">{isRtl ? "من نحن" : "About Us"}</span>
+            <h1 className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mt-3 sm:mt-4 leading-tight ${isRtl ? "font-arabic" : ""}`}>
               {a.hero_title}
             </h1>
-            <p className="text-white/50 text-lg mt-4 max-w-xl">{a.hero_sub}</p>
+            <p className="text-white/50 text-sm sm:text-base md:text-lg mt-3 sm:mt-4 max-w-xl">{a.hero_sub}</p>
           </div>
         </div>
       </section>

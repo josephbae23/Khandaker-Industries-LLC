@@ -1,6 +1,5 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
 import Icon from "@/components/ui/Icon";
-import { withBasePath } from "@/lib/basePath";
 
 const SERVICE_IMAGES = [
   "/services/manpower-supply.jpg",
