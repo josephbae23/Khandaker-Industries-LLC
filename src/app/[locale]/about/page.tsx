@@ -96,7 +96,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
             <div className={`max-w-4xl mx-auto mt-6 text-navy-600/80 text-base leading-relaxed space-y-4 ${isRtl ? "text-right" : "text-left md:text-center"}`}>
               <p>
-                {a.leadership_intro_1 ?? "At Khandaker Industries LLC, our leadership team is the driving force behind our success."}
+                {a.leadership_intro_1 ?? "At Khandaker Industries Company, our leadership team is the driving force behind our success."}
               </p>
               <p>
                 {a.leadership_intro_2 ?? "Through strategic direction and operational excellence, our leadership strengthens our position as a trusted name in the industry."}
@@ -112,7 +112,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 title: "Managing Director",
                 quote: [
                   "As the Managing Director, Khandaker Shahjahan leads the organization with a clear vision and unwavering determination. His leadership is defined by strategic foresight, innovation, and a deep understanding of global business dynamics. Under his guidance, the company has expanded its capabilities and strengthened its market presence.",
-                  "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries LLC.",
+                  "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries Company.",
                 ],
                 image: "/team/KHANDAKER SHAHJAHAN.jpeg",
               },
@@ -142,7 +142,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 title: "Director",
                 quote: [
                   "Md Ziaur Rahman provides valuable experience and insight that support the company\'s long-term vision. His commitment to integrity, trust, and disciplined growth helps guide the organization toward stability and sustained success.",
-                  "He remains focused on strengthening client relationships and upholding the company\'s core values, ensuring that Khandaker Industries LLC continues to grow with confidence and credibility.",
+                  "He remains focused on strengthening client relationships and upholding the company\'s core values, ensuring that Khandaker Industries Company continues to grow with confidence and credibility.",
                 ],
                 image: "/team/MD ZIAUR RAHMAN.jpeg",
               },

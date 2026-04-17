@@ -17,8 +17,8 @@ export async function generateMetadata({
   const isAr = paramLocale === "ar";
   return {
     title: isAr
-      ? "خنداكر إندستريز ش.م.م | توريد العمالة والتأشيرات والسفر"
-      : "Khandaker Industries LLC | Manpower, Visa & Travel Solutions",
+      ? "خنداكر إندستريز كومباني | توريد العمالة والتأشيرات والسفر"
+      : "Khandaker Industries Company | Manpower, Visa & Travel Solutions",
     description: isAr
       ? "شركة رائدة في توريد العمالة ومعالجة التأشيرات وحلول السفر بين بنغلاديش والمملكة العربية السعودية"
       : "Premier manpower supply, visa processing and travel solutions connecting Bangladesh and Saudi Arabia since 2007.",

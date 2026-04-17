@@ -84,7 +84,7 @@ export default function Hero({ locale, t }: HeroProps) {
             {[
               { value: "8K+", label: isRtl ? "مشروع مكتمل" : "Projects Completed" },
               { value: "5K+", label: isRtl ? "قوى عاملة منشورة" : "Workers Deployed" },
-              { value: "450+", label: isRtl ? "شريك عميل" : "Client Partners" },
+              { value: "800+", label: isRtl ? "شريك عميل" : "Client Partners" },
               { value: "17+", label: isRtl ? "سنوات خبرة" : "Years Experience" },
             ].map((stat) => (
               <div key={stat.label} className="pl-0">

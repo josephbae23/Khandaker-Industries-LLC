@@ -2,7 +2,6 @@ import { type Locale, getTranslations } from "@/lib/i18n";
 import Icon from "@/components/ui/Icon";
 import { withBasePath } from "@/lib/basePath";
 import ContactForm from "@/components/sections/ContactForm";
-import OfficesMap from "@/components/sections/OfficesMap";
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: paramLocale } = await params;
@@ -31,66 +30,94 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      {/* Office Cards */}
+      {/* Office Cards with Maps */}
       <section className="section-py bg-white" dir={isRtl ? "rtl" : "ltr"}>
         <div className="container-main">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Dhaka */}
-            <div className={`border border-navy-100 shadow-card p-8 ${isRtl ? "text-right" : "text-left"}`}>
-              <div className={`flex items-center gap-3 mb-5 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                <div className="w-10 h-10 bg-navy-800 flex items-center justify-center flex-shrink-0">
-                  <span className="text-gold-400 text-sm font-bold">BD</span>
+            {/* Dhaka Office + Map */}
+            <div className="space-y-4">
+              <div className={`border border-navy-100 shadow-card p-8 ${isRtl ? "text-right" : "text-left"}`}>
+                <div className={`flex items-center gap-3 mb-5 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                  <div className="w-10 h-10 bg-navy-800 flex items-center justify-center flex-shrink-0">
+                    <span className="text-gold-400 text-sm font-bold">BD</span>
+                  </div>
+                  <div className={isRtl ? "text-right" : ""}>
+                    <h3 className={`text-navy-800 font-semibold text-lg ${isRtl ? "text-right" : ""}`}>{c.dhaka_label}</h3>
+                    <p className={`text-gold-500 text-xs font-medium tracking-widest uppercase ${isRtl ? "text-right" : ""}`}>Bangladesh</p>
+                  </div>
                 </div>
-                <div className={isRtl ? "text-right" : ""}>
-                  <h3 className={`text-navy-800 font-semibold text-lg ${isRtl ? "text-right" : ""}`}>{c.dhaka_label}</h3>
-                  <p className={`text-gold-500 text-xs font-medium tracking-widest uppercase ${isRtl ? "text-right" : ""}`}>Bangladesh</p>
+                <div className={`space-y-3 ${isRtl ? "text-right" : ""}`}>
+                  <div className={`flex items-start gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="MapPin" className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-navy-600/70 text-sm leading-relaxed">{f.dhaka.address}</p>
+                  </div>
+                  <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="Phone" className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                    <a href="tel:+8801772909679" className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.phone}</a>
+                  </div>
+                  <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="Mail" className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                    <a href={`mailto:${f.email}`} className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.email}</a>
+                  </div>
                 </div>
               </div>
-              <div className={`space-y-3 ${isRtl ? "text-right" : ""}`}>
-                <div className={`flex items-start gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="MapPin" className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-navy-600/70 text-sm leading-relaxed">{f.dhaka.address}</p>
-                </div>
-                <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="Phone" className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                  <a href="tel:+8801772909679" className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.phone}</a>
-                </div>
-                <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="Mail" className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                  <a href={`mailto:${f.email}`} className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.email}</a>
+              <div className="border border-navy-100 shadow-card overflow-hidden">
+                <div className="relative w-full aspect-[3/2]">
+                  <iframe
+                    title="Dhaka Office Google Map"
+                    src="https://www.google.com/maps?q=23.7272598,90.4211957&z=15&output=embed"
+                    className="absolute inset-0 h-full w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
 
-            {/* Jeddah */}
-            <div className={`border border-navy-100 shadow-card p-8 ${isRtl ? "text-right" : "text-left"}`}>
-              <div className={`flex items-center gap-3 mb-5 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                <div className="w-10 h-10 bg-gold-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-navy-900 text-sm font-bold">SA</span>
+            {/* Al Jubail Office + Map */}
+            <div className="space-y-4">
+              <div className={`border border-navy-100 shadow-card p-8 ${isRtl ? "text-right" : "text-left"}`}>
+                <div className={`flex items-center gap-3 mb-5 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                  <div className="w-10 h-10 bg-gold-500 flex items-center justify-center flex-shrink-0">
+                    <span className="text-navy-900 text-sm font-bold">SA</span>
+                  </div>
+                  <div className={isRtl ? "text-right" : ""}>
+                    <h3 className={`text-navy-800 font-semibold text-lg ${isRtl ? "text-right" : ""}`}>{c.jeddah_label}</h3>
+                    <p className={`text-gold-500 text-xs font-medium tracking-widest uppercase ${isRtl ? "text-right" : ""}`}>Saudi Arabia</p>
+                  </div>
                 </div>
-                <div className={isRtl ? "text-right" : ""}>
-                  <h3 className={`text-navy-800 font-semibold text-lg ${isRtl ? "text-right" : ""}`}>{c.jeddah_label}</h3>
-                  <p className={`text-gold-500 text-xs font-medium tracking-widest uppercase ${isRtl ? "text-right" : ""}`}>Saudi Arabia</p>
+                <div className={`space-y-3 ${isRtl ? "text-right" : ""}`}>
+                  <div className={`flex items-start gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="MapPin" className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-navy-600/70 text-sm leading-relaxed">{f.jeddah.address}</p>
+                  </div>
+                  <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="Phone" className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                    <span className="text-navy-600/70 text-sm text-right" dir="ltr">{f.phone_jeddah}</span>
+                  </div>
+                  <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
+                    <Icon name="Mail" className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                    <a href={`mailto:${f.email}`} className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.email}</a>
+                  </div>
                 </div>
               </div>
-              <div className={`space-y-3 ${isRtl ? "text-right" : ""}`}>
-                <div className={`flex items-start gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="MapPin" className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-navy-600/70 text-sm leading-relaxed">{f.jeddah.address}</p>
-                </div>
-                <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="Phone" className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                  <span className="text-navy-600/70 text-sm text-right" dir="ltr">{f.phone_jeddah}</span>
-                </div>
-                <div className={`flex items-center gap-3 w-full ${isRtl ? "flex-row-reverse justify-end text-right" : ""}`}>
-                  <Icon name="Mail" className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                  <a href={`mailto:${f.email}`} className="text-navy-600/70 text-sm hover:text-gold-600 transition-colors text-right" dir="ltr">{f.email}</a>
+              <div className="border border-navy-100 shadow-card overflow-hidden">
+                <div className="relative w-full aspect-[3/2]">
+                  <iframe
+                    title="Al Jubail Office Google Map"
+                    src="https://www.google.com/maps?q=27.0006968,49.6532161&z=15&output=embed"
+                    className="absolute inset-0 h-full w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form + Map */}
+          {/* Contact Form + Quick Connect */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Contact Form */}
             <div className={`lg:col-span-3 ${isRtl ? "text-right" : "text-left"}`}>
@@ -102,37 +129,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <ContactForm t={c} isRtl={isRtl} />
             </div>
 
-            {/* Map Placeholder + Info */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* Map placeholder */}
-              <div className={isRtl ? "text-right" : "text-left"}>
-                <span className="gold-badge">{isRtl ? "موقعنا" : "Find Us"}</span>
-                <h2 className={`text-2xl font-bold text-navy-800 mt-4 mb-6 ${isRtl ? "font-arabic" : "font-display"}`}>
-                  {isRtl ? "مكاتبنا" : "Our Offices"}
-                </h2>
-              </div>
-
-              <OfficesMap
-                offices={[
-                  {
-                    name: "Dhaka Office",
-                    lat: 23.8103,
-                    lng: 90.4125,
-                    address: f.dhaka.address,
-                    phone: f.phone,
-                  },
-                  {
-                    name: "Jeddah Office",
-                    lat: 21.5433,
-                    lng: 39.1728,
-                    address: f.jeddah.address,
-                    phone: f.phone_jeddah,
-                  },
-                ]}
-                isRtl={isRtl}
-              />
-
-              {/* Quick contact */}
+            {/* Quick Contact */}
+            <div className="lg:col-span-2">
               <div className={`bg-navy-800 p-6 ${isRtl ? "text-right" : "text-left"}`} dir={isRtl ? "rtl" : "ltr"}>
                 <h4 className="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4">
                   {isRtl ? "تواصل سريع" : "Quick Connect"}

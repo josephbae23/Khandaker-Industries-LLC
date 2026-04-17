@@ -8,9 +8,9 @@
     "cta": "Get In Touch"
   },
   "hero": {
-    "badge": "Saudi-Approved LLC · Est. 2007",
+    "badge": "Saudi-Approved Company · Est. 2007",
     "headline": "Bridging Talent & Opportunity Across Saudi Arabia",
-    "subtext": "Khandaker Industries LLC is a premier manpower supply, visa processing, and travel solutions company connecting Bangladesh's skilled workforce with Saudi Arabia's growing industries.",
+    "subtext": "Khandaker Industries Company is a premier manpower supply, visa processing, and travel solutions company connecting Bangladesh's skilled workforce with Saudi Arabia's growing industries.",
     "cta_primary": "Call / WhatsApp",
     "cta_secondary": "Contact Us",
     "align": "left"
@@ -34,7 +34,7 @@
         "icon": "Globe",
         "label": "Our Reach",
         "value": "2 Nations",
-        "desc": "Offices in Dhaka, Bangladesh & Jeddah, Saudi Arabia"
+        "desc": "Offices in Dhaka, Bangladesh & Al Jubail, Saudi Arabia"
       }
     ]
   },
@@ -106,7 +106,7 @@
     "items": [
       { "year": "2007", "event": "Established in Dhaka as a licensed manpower recruitment agency, laying the groundwork for trusted international partnerships." },
       { "year": "2010", "event": "Received official approval from the Saudi Government and successfully deployed our first batch of 300 skilled workers." },
-      { "year": "2014", "event": "Opened our Jeddah office, strengthening our presence in Saudi Arabia and expanding into hospitality and healthcare sectors." },
+      { "year": "2014", "event": "Opened our Saudi office, strengthening our presence in Saudi Arabia and expanding into hospitality and healthcare sectors." },
       { "year": "2018", "event": "Achieved 2,500+ successful placements and launched our dedicated visa processing division to provide end-to-end solutions." },
       { "year": "2021", "event": "Founded our sister concern, KS Group, and diversified into comprehensive travel and mobility services." },
       { "year": "2024", "event": "Surpassed 5,000 successful placements and became an active partner in Saudi Arabia's Vision 2030 initiative." }
@@ -114,7 +114,7 @@
   },
   "cta_strip": {
     "headline": "Ready to Build Your Workforce?",
-    "subtext": "Connect with our team in Dhaka or Jeddah. We respond within 24 hours.",
+    "subtext": "Connect with our team in Dhaka or Al Jubail. We respond within 24 hours.",
     "btn": "Contact Our Team"
   },
   "memories": {
@@ -129,23 +129,23 @@
       "address": "49, Shapla Bhaban (2nd Floor), Room No. 307, Motijheel Commercial Area, Dhaka – 1000, Bangladesh"
     },
     "jeddah": {
-      "label": "Jeddah Office",
-      "address": "Office No. 12, 3rd Floor, Al-Rashid Tower, King Abdulaziz Street, Al-Balad District, Jeddah 21411, Saudi Arabia"
+      "label": "Al Jubail Office",
+      "address": "Building 8729, Rahemah St. Al Salat Dist, Sec 5130 Al Jubail 35514, Kingdom of Saudi Arabia"
     },
     "phone": "+880 1772-909679, +880 1538-002513",
     "phone_jeddah": "+966 56 214 3690, +966 57 286 3218",
-    "email": "k.industriesllc.ksg@gmail.com",
-    "copyright": "© 2024 Khandaker Industries LLC. All rights reserved.",
+    "email": "kic.ksgbd@gmail.com",
+    "copyright": "© 2024 Khandaker Industries Company. All rights reserved.",
     "links": ["Privacy Policy", "Terms of Service"]
   },
   "about": {
     "hero_title": "Our Story",
     "hero_sub": "17 years of integrity, excellence, and cross-border impact.",
     "story_title": "Who We Are",
-    "story": "Khandaker Industries LLC is built on a legacy that began in Bangladesh with KS Group, where our journey first took shape with a clear purpose: to create meaningful opportunities and deliver dependable business solutions.\n\nOver the years, that foundation of trust, experience, and commitment has evolved into a dynamic international presence. Today, as a Saudi-approved LLC and a proud extension of KS Group, we operate with a strong focus on integrity, compliance, and excellence across every aspect of our services.\n\nOur expertise spans the complete service cycle, from talent sourcing and skills verification to visa processing, travel coordination, and post-placement support. With operations connecting Bangladesh and the Kingdom of Saudi Arabia, we ensure every client receives reliable, efficient, and professional service, while every individual is supported with care and dignity.\n\nDriven by experience and guided by values, we continue to grow as a trusted partner, delivering solutions that create lasting impact for both businesses and people.",
+    "story": "Khandaker Industries Company is built on a legacy that began in Bangladesh with KS Group, where our journey first took shape with a clear purpose: to create meaningful opportunities and deliver dependable business solutions.\n\nOver the years, that foundation of trust, experience, and commitment has evolved into a dynamic international presence. Today, as a Saudi-approved company and a proud extension of KS Group, we operate with a strong focus on integrity, compliance, and excellence across every aspect of our services.\n\nOur expertise spans the complete service cycle, from talent sourcing and skills verification to visa processing, travel coordination, and post-placement support. With operations connecting Bangladesh and the Kingdom of Saudi Arabia, we ensure every client receives reliable, efficient, and professional service, while every individual is supported with care and dignity.\n\nDriven by experience and guided by values, we continue to grow as a trusted partner, delivering solutions that create lasting impact for both businesses and people.",
     "leadership_badge": "About Our Leadership",
     "leadership_title": "Our Leadership Team",
-    "leadership_intro_1": "At Khandaker Industries LLC, our leadership team is the driving force behind our success, bringing together vision, experience, and a shared commitment to excellence. With a forward-thinking approach and strong ethical foundation, our leaders guide the organization toward sustainable growth, innovation, and long-term value creation.",
+    "leadership_intro_1": "At Khandaker Industries Company, our leadership team is the driving force behind our success, bringing together vision, experience, and a shared commitment to excellence. With a forward-thinking approach and strong ethical foundation, our leaders guide the organization toward sustainable growth, innovation, and long-term value creation.",
     "leadership_intro_2": "Their collective expertise across manpower, travel, and visa services ensures that we consistently deliver reliable solutions while maintaining the highest standards of professionalism. Through strategic direction and operational excellence, our leadership continues to strengthen our position as a trusted name in the industry.",
     "commitment_title": "Our Commitment",
     "commitment_intro": "Together, our leadership team is committed to:",
@@ -172,7 +172,7 @@
         "title": "Managing Director",
         "quote": [
           "As the Managing Director, Khandaker Shahjahan leads the organization with a clear vision and unwavering determination. His leadership is defined by strategic foresight, innovation, and a deep understanding of global business dynamics. Under his guidance, the company has expanded its capabilities and strengthened its market presence.",
-          "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries LLC."
+          "He is committed to building long-term partnerships, fostering trust, and delivering exceptional value to clients. His focus on sustainable growth and operational excellence continues to shape the future of Khandaker Industries Company."
         ]
       },
       "md_sohel_rana": {
@@ -196,7 +196,7 @@
         "title": "Director",
         "quote": [
           "Md Ziaur Rahman provides valuable experience and insight that support the company's long-term vision. His commitment to integrity, trust, and disciplined growth helps guide the organization toward stability and sustained success.",
-          "He remains focused on strengthening client relationships and upholding the company's core values, ensuring that Khandaker Industries LLC continues to grow with confidence and credibility."
+          "He remains focused on strengthening client relationships and upholding the company's core values, ensuring that Khandaker Industries Company continues to grow with confidence and credibility."
         ]
       }
     },
@@ -240,7 +240,7 @@
   },
   "contact": {
     "hero_title": "Contact Us",
-    "hero_sub": "Reach our teams in Dhaka and Jeddah. We're here to help.",
+    "hero_sub": "Reach our teams in Dhaka and Al Jubail. We're here to help.",
     "form_name": "Full Name",
     "form_email": "Email Address",
     "form_phone": "Phone Number",
@@ -249,6 +249,6 @@
     "form_submit": "Send Message",
     "form_success": "Thank you! We'll be in touch within 24 hours.",
     "dhaka_label": "Dhaka HQ",
-    "jeddah_label": "Jeddah Office"
+    "jeddah_label": "Al Jubail Office"
   }
 }

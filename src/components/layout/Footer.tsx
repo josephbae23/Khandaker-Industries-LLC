@@ -45,7 +45,7 @@ export default function Footer({ locale, t }: FooterProps) {
                 <div className="text-white font-display font-bold text-sm tracking-wide">
                   {isRtl ? "خنداكر إندستريز" : "KHANDAKER INDUSTRIES"}
                 </div>
-                <div className="text-gold-400 text-[10px] tracking-widest uppercase">{isRtl ? "ش.م.م" : "LLC"}</div>
+                <div className="text-gold-400 text-[10px] tracking-widest uppercase">{isRtl ? "ش.م.م" : "COMPANY"}</div>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">{t.tagline}</p>
@@ -84,7 +84,7 @@ export default function Footer({ locale, t }: FooterProps) {
             </div>
           </div>
 
-          {/* Jeddah Office */}
+          {/* Al Jubail Office */}
           <div className={isRtl ? "text-right" : "text-left"}>
             <h4 className="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4">
               {t.jeddah.label}

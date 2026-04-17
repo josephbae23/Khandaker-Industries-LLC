@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Khandaker Industries LLC",
+  title: "Khandaker Industries Company",
   description: "Premier manpower supply, visa processing and travel solutions — Bangladesh to Saudi Arabia",
 };
 

@@ -58,7 +58,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
                 {isRtl ? "خنداكر إندستريز" : "KHANDAKER"}
               </div>
               <div className="text-gold-500 text-[10px] font-medium tracking-widest uppercase leading-none mt-0.5">
-                {isRtl ? "ش.م.م" : "INDUSTRIES LLC"}
+                {isRtl ? "ش.م.م" : "INDUSTRIES COMPANY"}
               </div>
             </div>
           </Link>
