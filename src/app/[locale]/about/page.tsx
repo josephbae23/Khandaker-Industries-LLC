@@ -1,4 +1,5 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
+import { withBasePath } from "@/lib/basePath";
 import Icon from "@/components/ui/Icon";
 import LicenseGalleryPopup from "@/components/sections/LicenseGalleryPopup";
 

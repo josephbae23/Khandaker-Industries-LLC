@@ -1,4 +1,5 @@
 import { type Locale, getTranslations } from "@/lib/i18n";
+import { withBasePath } from "@/lib/basePath";
 
 export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: paramLocale } = await params;
