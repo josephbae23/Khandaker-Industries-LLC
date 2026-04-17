@@ -49,7 +49,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3 flex-shrink-0">
             <img
-              src={withBasePath("/logo.png")}
+              src={withBasePath("/logo.jpeg")}
               alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
               className="w-10 h-10 object-contain"
             />
