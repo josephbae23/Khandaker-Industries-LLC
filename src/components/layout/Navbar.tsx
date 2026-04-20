@@ -40,8 +40,8 @@ export default function Navbar({ locale, t }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 shadow-sm backdrop-blur-md border-b border-navy-100 py-3"
-          : "bg-stone-50/70 backdrop-blur-sm border-b border-navy-50 py-5"
+          ? "bg-sand-50/95 shadow-[0_12px_30px_rgba(3,9,18,0.12)] backdrop-blur-md border-b border-navy-100/60 py-3"
+          : "bg-sand-50/80 backdrop-blur-sm border-b border-navy-100/50 py-5"
       }`}
     >
       <div className="container-main">
@@ -49,7 +49,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3 flex-shrink-0">
             <img
-              src={withBasePath("/logo.jpeg")}
+              src={withBasePath("/logo new.png")}
               alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
               className="w-10 h-10 object-contain"
             />
@@ -122,7 +122,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-navy-100 mt-3">
+        <div className="lg:hidden bg-sand-50/95 backdrop-blur-md border-t border-navy-100/60 mt-3">
           <div className="container-main py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link

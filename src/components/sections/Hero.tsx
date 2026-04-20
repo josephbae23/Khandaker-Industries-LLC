@@ -83,7 +83,7 @@ export default function Hero({ locale, t }: HeroProps) {
           <div className={`mt-8 sm:mt-12 pt-6 sm:pt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 ${isRtl ? "text-right" : "text-left"}`}>
             {[
               { value: "8K+", label: isRtl ? "مشروع مكتمل" : "Projects Completed" },
-              { value: "5K+", label: isRtl ? "قوى عاملة منشورة" : "Workers Deployed" },
+              { value: "8K+", label: isRtl ? "قوى عاملة منشورة" : "Workers Deployed" },
               { value: "800+", label: isRtl ? "شريك عميل" : "Client Partners" },
               { value: "17+", label: isRtl ? "سنوات خبرة" : "Years Experience" },
             ].map((stat) => (
