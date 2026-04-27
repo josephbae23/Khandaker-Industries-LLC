@@ -38,7 +38,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-montserrat ${
         scrolled
           ? "bg-navy-950/95 shadow-[0_12px_30px_rgba(3,9,18,0.45)] backdrop-blur-md border-b border-navy-700/60 py-3"
           : "bg-navy-900/88 backdrop-blur-sm border-b border-navy-700/50 py-5"
@@ -54,7 +54,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
               className="w-11 h-11 sm:w-12 sm:h-12 object-contain"
             />
             <div className={`${isRtl ? "text-right" : "text-left"}`}>
-              <div className="text-white font-display font-bold text-base sm:text-lg leading-none tracking-wide">
+              <div className="text-white font-montserrat font-bold text-base sm:text-lg leading-none tracking-wide">
                 {isRtl ? "خنداكر إندستريز" : "KHANDAKER"}
               </div>
               <div className="text-gold-500 text-[11px] font-medium tracking-widest uppercase leading-none mt-0.5">

@@ -27,7 +27,7 @@ export default function Footer({ locale, t }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-navy-950 text-white" dir={isRtl ? "rtl" : "ltr"}>
+    <footer className="bg-navy-950 text-white font-montserrat" dir={isRtl ? "rtl" : "ltr"}>
       {/* Top Strip */}
       <div className="bg-gold-gradient h-1" />
 
@@ -42,7 +42,7 @@ export default function Footer({ locale, t }: FooterProps) {
                 className="w-12 h-12 object-contain flex-shrink-0"
               />
               <div>
-                <div className="text-white font-display font-bold text-base tracking-wide">
+                <div className="text-white font-montserrat font-bold text-base tracking-wide">
                   {isRtl ? "خنداكر إندستريز" : "KHANDAKER INDUSTRIES"}
                 </div>
                 <div className="text-gold-400 text-[11px] tracking-widest uppercase">{isRtl ? "ش.م.م" : "COMPANY"}</div>

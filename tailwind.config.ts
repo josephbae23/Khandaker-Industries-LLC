@@ -44,6 +44,7 @@ const config: Config = {
         display: ["var(--font-playfair)", "Georgia", "serif"],
         body:    ["var(--font-inter)", "system-ui", "sans-serif"],
         arabic:  ["var(--font-cairo)", "Arial", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "var(--font-inter)", "system-ui", "sans-serif"],
         mono:    ["var(--font-mono)", "monospace"],
       },
       backgroundImage: {
