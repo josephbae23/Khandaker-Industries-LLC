@@ -51,13 +51,13 @@ export default function Navbar({ locale, t }: NavbarProps) {
             <img
               src={withBasePath("/logo new.jpeg")}
               alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
-              className="w-10 h-10 object-contain"
+              className="w-11 h-11 sm:w-12 sm:h-12 object-contain"
             />
             <div className={`${isRtl ? "text-right" : "text-left"}`}>
-              <div className="text-white font-display font-bold text-base leading-none tracking-wide">
+              <div className="text-white font-display font-bold text-base sm:text-lg leading-none tracking-wide">
                 {isRtl ? "خنداكر إندستريز" : "KHANDAKER"}
               </div>
-              <div className="text-gold-500 text-[10px] font-medium tracking-widest uppercase leading-none mt-0.5">
+              <div className="text-gold-500 text-[11px] font-medium tracking-widest uppercase leading-none mt-0.5">
                 {isRtl ? "ش.م.م" : "INDUSTRIES COMPANY"}
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/85 hover:text-gold-400 text-sm font-medium px-4 py-2 transition-colors duration-200 tracking-wide"
+                className="text-white/85 hover:text-gold-400 text-base font-medium px-4 py-2 transition-colors duration-200 tracking-wide"
               >
                 {link.label}
               </Link>
@@ -81,14 +81,14 @@ export default function Navbar({ locale, t }: NavbarProps) {
             {/* Language Toggle */}
             <Link
               href={`/${otherLocale}`}
-              className="flex items-center gap-1.5 text-white/85 hover:text-gold-400 text-sm font-medium transition-colors border border-navy-600 hover:border-gold-500/60 px-3 py-1.5"
+              className="flex items-center gap-1.5 text-white/85 hover:text-gold-400 text-base font-medium transition-colors border border-navy-600 hover:border-gold-500/60 px-3 py-1.5"
             >
               <span className="text-xs">🌐</span>
               <span>{locale === "en" ? "العربية" : "English"}</span>
             </Link>
 
             {/* CTA */}
-            <Link href={`/${locale}/contact`} className="btn-primary text-sm py-2.5 px-5">
+            <Link href={`/${locale}/contact`} className="btn-primary text-base py-2.5 px-5">
               {t.cta}
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/85 hover:text-gold-400 text-sm font-medium px-2 py-3 border-b border-navy-700/50 transition-colors"
+                className="text-white/85 hover:text-gold-400 text-base font-medium px-2 py-3 border-b border-navy-700/50 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -137,11 +137,11 @@ export default function Navbar({ locale, t }: NavbarProps) {
             <div className="flex items-center gap-3 pt-4">
               <Link
                 href={`/${otherLocale}`}
-                className="text-white/85 hover:text-gold-400 text-sm border border-navy-600 px-3 py-2"
+                className="text-white/85 hover:text-gold-400 text-base border border-navy-600 px-3 py-2"
               >
                 {locale === "en" ? "العربية" : "English"}
               </Link>
-              <Link href={`/${locale}/contact`} className="btn-primary text-sm py-2 px-4">
+              <Link href={`/${locale}/contact`} className="btn-primary text-base py-2 px-4">
                 {t.cta}
               </Link>
             </div>

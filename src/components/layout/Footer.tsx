@@ -39,21 +39,21 @@ export default function Footer({ locale, t }: FooterProps) {
               <img
                 src={withBasePath("/logo new.jpeg")}
                 alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
-                className="w-10 h-10 object-contain flex-shrink-0"
+                className="w-12 h-12 object-contain flex-shrink-0"
               />
               <div>
-                <div className="text-white font-display font-bold text-sm tracking-wide">
+                <div className="text-white font-display font-bold text-base tracking-wide">
                   {isRtl ? "خنداكر إندستريز" : "KHANDAKER INDUSTRIES"}
                 </div>
-                <div className="text-gold-400 text-[10px] tracking-widest uppercase">{isRtl ? "ش.م.م" : "COMPANY"}</div>
+                <div className="text-gold-400 text-[11px] tracking-widest uppercase">{isRtl ? "ش.م.م" : "COMPANY"}</div>
               </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed">{t.tagline}</p>
+            <p className="text-white/60 text-base leading-relaxed">{t.tagline}</p>
           </div>
 
           {/* Quick Links */}
           <div className={isRtl ? "text-right" : "text-left"}>
-            <h4 className="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4">
+            <h4 className="text-gold-400 font-semibold text-base tracking-widest uppercase mb-4">
               {isRtl ? "روابط سريعة" : "Quick Links"}
             </h4>
             <ul className="space-y-2">
@@ -61,7 +61,7 @@ export default function Footer({ locale, t }: FooterProps) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-gold-400 text-sm transition-colors"
+                    className="text-white/60 hover:text-gold-400 text-base transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -72,13 +72,13 @@ export default function Footer({ locale, t }: FooterProps) {
 
           {/* Dhaka Office */}
           <div className={isRtl ? "text-right" : "text-left"}>
-            <h4 className="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4">
+            <h4 className="text-gold-400 font-semibold text-base tracking-widest uppercase mb-4">
               {t.dhaka.label}
             </h4>
             <div className="space-y-2">
-              <p className="text-white/60 text-sm leading-relaxed">{t.dhaka.address}</p>
-              <p className="text-white/60 text-sm" dir="ltr">{t.phone}</p>
-              <a href={`mailto:${t.email}`} className="text-white/60 hover:text-gold-400 text-sm transition-colors block" dir="ltr">
+              <p className="text-white/60 text-base leading-relaxed">{t.dhaka.address}</p>
+              <p className="text-white/60 text-base" dir="ltr">{t.phone}</p>
+              <a href={`mailto:${t.email}`} className="text-white/60 hover:text-gold-400 text-base transition-colors block" dir="ltr">
                 {t.email}
               </a>
             </div>
@@ -86,13 +86,13 @@ export default function Footer({ locale, t }: FooterProps) {
 
           {/* Al Jubail Office */}
           <div className={isRtl ? "text-right" : "text-left"}>
-            <h4 className="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4">
+            <h4 className="text-gold-400 font-semibold text-base tracking-widest uppercase mb-4">
               {t.jeddah.label}
             </h4>
             <div className="space-y-2">
-              <p className="text-white/60 text-sm leading-relaxed">{t.jeddah.address}</p>
-              <p className="text-white/60 text-sm" dir="ltr">{t.phone_jeddah}</p>
-              <a href={`mailto:${t.email}`} className="text-white/60 hover:text-gold-400 text-sm transition-colors block" dir="ltr">
+              <p className="text-white/60 text-base leading-relaxed">{t.jeddah.address}</p>
+              <p className="text-white/60 text-base" dir="ltr">{t.phone_jeddah}</p>
+              <a href={`mailto:${t.email}`} className="text-white/60 hover:text-gold-400 text-base transition-colors block" dir="ltr">
                 {t.email}
               </a>
             </div>
