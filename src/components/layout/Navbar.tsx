@@ -40,8 +40,8 @@ export default function Navbar({ locale, t }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-sand-50/95 shadow-[0_12px_30px_rgba(3,9,18,0.12)] backdrop-blur-md border-b border-navy-100/60 py-3"
-          : "bg-sand-50/80 backdrop-blur-sm border-b border-navy-100/50 py-5"
+          ? "bg-navy-950/95 shadow-[0_12px_30px_rgba(3,9,18,0.45)] backdrop-blur-md border-b border-navy-700/60 py-3"
+          : "bg-navy-900/88 backdrop-blur-sm border-b border-navy-700/50 py-5"
       }`}
     >
       <div className="container-main">
@@ -49,12 +49,12 @@ export default function Navbar({ locale, t }: NavbarProps) {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3 flex-shrink-0">
             <img
-              src={withBasePath("/logo new.png")}
+              src={withBasePath("/logo new.jpeg")}
               alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
               className="w-10 h-10 object-contain"
             />
             <div className={`${isRtl ? "text-right" : "text-left"}`}>
-              <div className="text-navy-950 font-display font-bold text-base leading-none tracking-wide">
+              <div className="text-white font-display font-bold text-base leading-none tracking-wide">
                 {isRtl ? "خنداكر إندستريز" : "KHANDAKER"}
               </div>
               <div className="text-gold-500 text-[10px] font-medium tracking-widest uppercase leading-none mt-0.5">
@@ -69,7 +69,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-navy-700 hover:text-gold-500 text-sm font-medium px-4 py-2 transition-colors duration-200 tracking-wide"
+                className="text-white/85 hover:text-gold-400 text-sm font-medium px-4 py-2 transition-colors duration-200 tracking-wide"
               >
                 {link.label}
               </Link>
@@ -81,7 +81,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
             {/* Language Toggle */}
             <Link
               href={`/${otherLocale}`}
-              className="flex items-center gap-1.5 text-navy-600 hover:text-gold-500 text-sm font-medium transition-colors border border-navy-200 hover:border-gold-500/50 px-3 py-1.5"
+              className="flex items-center gap-1.5 text-white/85 hover:text-gold-400 text-sm font-medium transition-colors border border-navy-600 hover:border-gold-500/60 px-3 py-1.5"
             >
               <span className="text-xs">🌐</span>
               <span>{locale === "en" ? "العربية" : "English"}</span>
@@ -95,23 +95,23 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-navy-950 p-2"
+            className="lg:hidden text-white p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
             <div className="w-6 flex flex-col gap-1.5">
               <span
-                className={`block h-0.5 bg-navy-950 transition-all duration-200 ${
+                className={`block h-0.5 bg-white transition-all duration-200 ${
                   menuOpen ? "rotate-45 translate-y-2" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 bg-navy-950 transition-all duration-200 ${
+                className={`block h-0.5 bg-white transition-all duration-200 ${
                   menuOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 bg-navy-950 transition-all duration-200 ${
+                className={`block h-0.5 bg-white transition-all duration-200 ${
                   menuOpen ? "-rotate-45 -translate-y-2" : ""
                 }`}
               />
@@ -122,13 +122,13 @@ export default function Navbar({ locale, t }: NavbarProps) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-sand-50/95 backdrop-blur-md border-t border-navy-100/60 mt-3">
+        <div className="lg:hidden bg-navy-900/95 backdrop-blur-md border-t border-navy-700/60 mt-3">
           <div className="container-main py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-navy-700 hover:text-gold-500 text-sm font-medium px-2 py-3 border-b border-navy-100/50 transition-colors"
+                className="text-white/85 hover:text-gold-400 text-sm font-medium px-2 py-3 border-b border-navy-700/50 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -137,7 +137,7 @@ export default function Navbar({ locale, t }: NavbarProps) {
             <div className="flex items-center gap-3 pt-4">
               <Link
                 href={`/${otherLocale}`}
-                className="text-navy-600 hover:text-gold-500 text-sm border border-navy-200 px-3 py-2"
+                className="text-white/85 hover:text-gold-400 text-sm border border-navy-600 px-3 py-2"
               >
                 {locale === "en" ? "العربية" : "English"}
               </Link>

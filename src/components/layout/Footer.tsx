@@ -37,7 +37,7 @@ export default function Footer({ locale, t }: FooterProps) {
           <div className={`lg:col-span-1 ${isRtl ? "text-right" : "text-left"}`}>
             <Link href={`/${locale}`} className="flex items-center gap-3 mb-4" style={{ flexDirection: isRtl ? "row-reverse" : "row", justifyContent: isRtl ? "flex-end" : "flex-start" }}>
               <img
-                src={withBasePath("/logo new.png")}
+                src={withBasePath("/logo new.jpeg")}
                 alt={isRtl ? "خنداكر إندستريز" : "Khandaker Industries"}
                 className="w-10 h-10 object-contain flex-shrink-0"
               />
